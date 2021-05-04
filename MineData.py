@@ -34,7 +34,7 @@ def saveFriends(parent, username, max_depth):
             activities.append(tweet.text)
         data["bio"] = user.description
         data["activity"] = activities
-        trainingJson["users"].append(data)
+        trainingJson["data"].append(data)
 
         users_gathered += 1
         used_names[username] = True
@@ -55,7 +55,7 @@ def saveFriends(parent, username, max_depth):
     #     saveFriends(parent, username, max_depth)
 
 
-saveFriends("", "ickobell", 50)
+saveFriends("", "ChildrensPhila", 1000)
 
 with open('twitter_training.json', 'w') as outfile:
     json.dump(trainingJson, outfile)
