@@ -49,10 +49,6 @@ def saveFriends(parent, username, max_depth):
     except tweepy.error.TweepError:
         return
 
-    # except tweepy.error.RateLimitError:
-    #
-    #     time.sleep(10)
-    #     saveFriends(parent, username, max_depth)
 
 
 saveFriends("", "ChildrensPhila", 1000)
